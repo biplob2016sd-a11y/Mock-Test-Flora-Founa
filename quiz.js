@@ -3,51 +3,51 @@ let currentQuestion = 0;
 const question = document.getElementById("question");
 const options = document.getElementById("options");
 
-function loadQuestion(){
+function loadQuestion() {
 
-let q = questions[currentQuestion];
+    let q = questions[currentQuestion];
 
-question.innerHTML = (currentQuestion+1)+". "+q.question;
+    question.innerHTML = (currentQuestion + 1) + ". " + q.question;
 
-options.innerHTML="";
+    options.innerHTML = "";
 
-q.options.forEach((option,index)=>{
+    q.options.forEach((option, index) => {
 
-options.innerHTML+=`
-<p>
-<label>
-<input type="radio" name="answer">
-${option}
-</label>
-</p>
-`;
+        options.innerHTML += `
+        <p>
+            <label>
+                <input type="radio" name="answer">
+                ${option}
+            </label>
+        </p>
+        `;
 
-});
+    });
 
 }
 
 loadQuestion();
 
-document.getElementById("nextBtn").onclick=function(){
+document.getElementById("nextBtn").onclick = function () {
 
-if(currentQuestion<questions.length-1){
+    if (currentQuestion < questions.length - 1) {
 
-currentQuestion++;
+        currentQuestion++;
 
-loadQuestion();
+        loadQuestion();
 
-}
+    }
 
-}
+};
 
-document.getElementById("prevBtn").onclick=function(){
+document.getElementById("prevBtn").onclick = function () {
 
-if(currentQuestion>0){
+    if (currentQuestion > 0) {
 
-currentQuestion--;
+        currentQuestion--;
 
-loadQuestion();
+        loadQuestion();
 
-}
+    }
 
-}
+};
