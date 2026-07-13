@@ -1,69 +1,79 @@
 body{
     margin:0;
     padding:0;
-    background:#f4f6f9;
+    background:#eef2f7;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 .container{
     width:90%;
-    max-width:500px;
+    max-width:420px;
     margin:40px auto;
     background:#ffffff;
     padding:30px;
     border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
     text-align:center;
 }
 
+/* Logo */
+
 .logo{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:50%;
+    width:70px;
+    height:70px;
+    object-fit:contain;
     display:block;
-    margin:0 auto 20px auto;
-    box-shadow:0 5px 15px rgba(0,0,0,0.25);
+    margin:0 auto 15px;
 }
 
+/* Heading */
+
 h1{
+    margin:0;
     color:#0d6efd;
-    margin-bottom:10px;
-    font-size:32px;
+    font-size:30px;
+    font-weight:bold;
 }
 
 h2{
-    color:#444;
-    font-size:22px;
+    margin-top:8px;
     margin-bottom:25px;
+    color:#666;
+    font-size:18px;
+    font-weight:normal;
 }
+
+/* Input Box */
 
 input{
     width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #d0d7de;
     border-radius:8px;
-    box-sizing:border-box;
     font-size:16px;
+    box-sizing:border-box;
 }
 
 input:focus{
     outline:none;
     border-color:#0d6efd;
+    box-shadow:0 0 5px rgba(13,110,253,.3);
 }
+
+/* Button */
 
 button{
     width:100%;
     padding:14px;
-    margin-top:15px;
     background:#0d6efd;
     color:#ffffff;
     border:none;
     border-radius:8px;
     font-size:18px;
+    font-weight:bold;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
 }
 
 button:hover{
