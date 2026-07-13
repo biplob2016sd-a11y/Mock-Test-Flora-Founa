@@ -1,18 +1,43 @@
-document.getElementById("startBtn").addEventListener("click", function () {
+// Student Login System
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let mobile = document.getElementById("mobile").value.trim();
+function loginStudent(){
 
-    if (name === "" || email === "" || mobile === "") {
-        alert("Please fill all details.");
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+
+    if(username === "" || password === ""){
+
+        alert("Please enter Username and Password");
+
         return;
+
     }
 
-    localStorage.setItem("studentName", name);
-    localStorage.setItem("studentEmail", email);
-    localStorage.setItem("studentMobile", mobile);
 
-    window.location.href = "dashboard.html";
+    // Save Login Status
 
-});
+    localStorage.setItem("studentLogin","true");
+    localStorage.setItem("studentName",username);
+
+
+
+    // Redirect to Dashboard
+
+    window.location.href="dashboard.html";
+
+
+}
+
+
+
+// Logout Function
+
+function logout(){
+
+    localStorage.removeItem("studentLogin");
+    localStorage.removeItem("studentName");
+
+    window.location.href="index.html";
+
+}
