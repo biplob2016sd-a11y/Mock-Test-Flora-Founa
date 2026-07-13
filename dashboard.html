@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-container">
+
+
+<header class="dashboard-header">
+
+<img src="logo.jpg" class="dashboard-logo">
+
+<h1>Student Dashboard</h1>
+
+<p>Welcome to Mock Test Platform</p>
+
+</header>
+
+
+
+<div class="student-info">
+
+<h2 id="studentName">Welcome Student</h2>
+
+<p>Prepare for your competitive exams with our premium mock tests.</p>
+
+</div>
+
+
+
+<h2 class="section-title">
+My Courses
+</h2>
+
+
+
+<div class="course-container">
+
+
+
+<div class="course-card">
+
+<h3>Tripura Flora & Fauna</h3>
+
+<p>
+Complete Mock Test Series
+</p>
+
+<p>
+Questions: 50
+</p>
+
+<p>
+Duration: 30 Minutes
+</p>
+
+
+<button onclick="openCourses()">
+View Course
+</button>
+
+</div>
+
+
+
+
+<div class="course-card">
+
+<h3>Tripura GK Mock Test</h3>
+
+<p>
+General Knowledge Practice Set
+</p>
+
+<p>
+Questions: 100
+</p>
+
+<p>
+Duration: 60 Minutes
+</p>
+
+
+<button onclick="openCourses()">
+View Course
+</button>
+
+</div>
+
+
+
+
+<div class="course-card">
+
+<h3>TRLM Exam 2026</h3>
+
+<p>
+Special Mock Test Series
+</p>
+
+<p>
+Questions: 100
+</p>
+
+<p>
+Duration: 60 Minutes
+</p>
+
+
+<button onclick="openCourses()">
+View Course
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+function openCourses(){
+
+window.location.href="courses.html";
+
+}
+
+
+
+// Login Protection
+
+if(localStorage.getItem("studentLogin")!="true"){
+
+window.location.href="index.html";
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
