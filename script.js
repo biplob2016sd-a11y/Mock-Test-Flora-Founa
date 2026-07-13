@@ -13,6 +13,6 @@ document.getElementById("startBtn").addEventListener("click", function () {
     localStorage.setItem("studentEmail", email);
     localStorage.setItem("studentMobile", mobile);
 
-    window.location.href = "quiz.html";
+    window.location.href = "dashboard.html";
 
 });
